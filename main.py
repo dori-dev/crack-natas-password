@@ -51,6 +51,7 @@ for char in CHARS:
 print(f"Currect characters: {filtered_characters}")
 
 for _ in range(32):
+    sleep(STOP_TIME*10)
     for testing_character in filtered_characters:
         sleep(STOP_TIME)
         current_char = get_respones(testing_character)
