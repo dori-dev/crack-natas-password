@@ -2,11 +2,15 @@
 """
 
 # Third party import
-import requests
+from requests import post
 
 # Local imports
-from variables import auth
-from variables import URL
-from variables import CHARS
-
+from required import auth, URL, CHARS
+from required import send_request
 password = ""
+
+
+
+while len(password) <= 32:
+    for test_char in CHARS:
+        send_request()
