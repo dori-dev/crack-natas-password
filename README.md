@@ -33,6 +33,13 @@ python3 main.py
 
 #
 
+# Authentications
+
+If you run the main.py get you authentication informations for go to `natas16`.
+
+
+#
+
 ## In case of `Error`
 
 - You can change `STOP_TIME` constant variable in `variables.py` to avoid connections errors!
