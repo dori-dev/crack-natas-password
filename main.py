@@ -6,8 +6,13 @@ from requests import post
 
 # Local imports
 from required import auth, URL, CHARS
-from required import send_request
+
+
 password = ""
+
+
+def send_request():
+    pass
 
 
 while len(password) <= 32:

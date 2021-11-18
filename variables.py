@@ -11,7 +11,3 @@ auth = (BASIC_USER, BASIC_PASS)
 URL = "http://natas15.natas.labs.overthewire.org/index.php"
 
 CHARS = ascii_letters + digits
-
-
-def send_request():
-    pass
