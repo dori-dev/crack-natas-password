@@ -1,5 +1,8 @@
 """Cracking natas password!
 """
 
-# Standart library import
+# Standart library imports
 import requests
+from string import ascii_letters, digits
+
+characters = ascii_letters + digits
