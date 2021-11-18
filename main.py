@@ -5,10 +5,14 @@
 from requests import post
 
 # Local imports
-from variables import auth, URL, CHARS
+from variables import auth, URL, CHARS, NAME
 
-
+# Variables
 password = ""
+
+
+def query_generator(currect_password: str, character: str) -> str:
+    return f'{NAME}{" AND password LIKE BINARY "}{currect_password}{character}%%" -- '
 
 
 def get_respones(character: str) -> str:
