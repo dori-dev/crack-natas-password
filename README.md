@@ -6,12 +6,6 @@ Cracking `natas15` password!
 
 # How to Use
 
-## Authentication Natas 15
-
-- Link: http://natas15.natas.labs.overthewire.org/index.php
-- Username: natas15
-- Password: AwWj0w5cvxrZiONgZ9J5stNVkmxdk39J
-
 ## Download Codes
 
 Download the source code for use.
@@ -37,6 +31,16 @@ First filtered the character and then testing character with sql injection.
 python3 main.py
 ```
 
+#
+
+# Authentications
+
+## Authentication Natas 15
+
+- Link: http://natas15.natas.labs.overthewire.org/index.php
+- Username: natas15
+- Password: AwWj0w5cvxrZiONgZ9J5stNVkmxdk39J
+
 ## Authentication Natas 16
 
 If you run the main.py get you this informations
@@ -47,7 +51,7 @@ If you run the main.py get you this informations
 
 #
 
-## If you had an `Error`
+## In case of `Error`
 
 - You can change `STOP_TIME` constant variable in `variables.py` to avoid connections errors!
 
