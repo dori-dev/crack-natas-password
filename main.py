@@ -39,3 +39,8 @@ while len(password) < 32:
         if current_char:
             password += current_char
             break
+
+print("-"*64)
+print("Link: http://natas16.natas.labs.overthewire.org/index.php")
+print(f"Username: natas16")
+print(f"Password: {password}")
