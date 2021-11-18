@@ -1,2 +1,3 @@
-# crack-natas15
-natas15 password cracker.
+# Crack natas15
+
+Cracking natas15 password!
