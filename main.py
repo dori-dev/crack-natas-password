@@ -10,7 +10,6 @@ from required import send_request
 password = ""
 
 
-
 while len(password) <= 32:
     for test_char in CHARS:
         send_request()
