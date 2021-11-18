@@ -6,7 +6,7 @@ import requests
 
 # Local imports
 from variables import auth
-from variables import url
-from variables import characters
+from variables import URL
+from variables import CHARS
 
 password = ""

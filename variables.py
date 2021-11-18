@@ -4,10 +4,10 @@
 # Standart library import
 from string import ascii_letters, digits
 
-basic_user = "natas15"
-basic_pass = "AwWj0w5cvxrZiONgZ9J5stNVkmxdk39J"
-auth = (basic_user, basic_pass)
+BASIC_USER = "natas15"
+BASIC_PASS = "AwWj0w5cvxrZiONgZ9J5stNVkmxdk39J"
+auth = (BASIC_USER, BASIC_PASS)
 
-url = "http://natas15.natas.labs.overthewire.org/index.php"
+URL = "http://natas15.natas.labs.overthewire.org/index.php"
 
-characters = ascii_letters + digits
+CHARS = ascii_letters + digits
