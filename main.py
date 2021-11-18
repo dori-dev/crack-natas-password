@@ -1,12 +1,12 @@
 """Cracking natas password!
 """
 
-# Standart library imports
+# Third party import
 import requests
-from string import ascii_letters, digits
 
-characters = ascii_letters + digits
+# Local imports
+from variables import auth
+from variables import url
+from variables import characters
+
 password = ""
-url = "http://natas15.natas.labs.overthewire.org/index.php"
-basic_user = "natas15"
-basic_pass = "AwWj0w5cvxrZiONgZ9J5stNVkmxdk39J"
