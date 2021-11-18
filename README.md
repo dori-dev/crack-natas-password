@@ -25,7 +25,7 @@ pip install requests
 
 ## Run The Code
 
-First filtered the character and then testing character with sql injection.
+First filtered the character and then testing password with sql injection.
 
 ```
 python3 main.py
