@@ -33,24 +33,6 @@ python3 main.py
 
 #
 
-# Authentications
-
-## Authentication Natas 15
-
-- Link: http://natas15.natas.labs.overthewire.org/index.php
-- Username: natas15
-- Password: AwWj0w5cvxrZiONgZ9J5stNVkmxdk39J
-
-## Authentication Natas 16
-
-If you run the main.py get you this informations
-
-- Link: http://natas16.natas.labs.overthewire.org/index.php
-- Username: natas16
-- Password: WaIHEacj63wnNIBROHeqi3p9t0m5nhmh
-
-#
-
 ## In case of `Error`
 
 - You can change `STOP_TIME` constant variable in `variables.py` to avoid connections errors!
