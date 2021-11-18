@@ -54,6 +54,7 @@ If you run the main.py get you this informations
 ## In case of `Error`
 
 - You can change `STOP_TIME` constant variable in `variables.py` to avoid connections errors!
+- Or set the `password` from the continuation of the last password found
 
 #
 
