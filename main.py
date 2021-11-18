@@ -5,7 +5,7 @@
 from requests import post
 
 # Local imports
-from required import auth, URL, CHARS
+from variables import auth, URL, CHARS
 
 
 password = ""
