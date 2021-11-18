@@ -31,6 +31,30 @@ pip install requests
 
 ## Run The Code
 
+First filtered the character and then testing character with sql injection.
+
 ```
 python3 main.py
 ```
+
+## Authentication Natas 16
+
+If you run the main.py get you this informations
+
+- Link: http://natas16.natas.labs.overthewire.org/index.php
+- Username: natas16
+- Password: WaIHEacj63wnNIBROHeqi3p9t0m5nhmh
+
+#
+
+## If you had an `Error`
+
+- You can change `STOP_TIME` constant variable in `variables.py` to avoid connections errors!
+
+#
+
+## Links
+
+Download Source Code: [Click Here](https://github.com/dori-dev/crack-natas-password/archive/refs/heads/main.zip)
+
+My Github Acount: [Click Here](https://github.com/dori-dev/)
