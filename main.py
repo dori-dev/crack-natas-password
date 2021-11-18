@@ -43,7 +43,7 @@ def get_respones(character: str) -> str:
     return ''
 
 
-while len(password) <= 32:
+while len(password) < 32:
     print(f"length: {len(password)}, password: {password}")
     for testing_character in CHARS:
         current_char = get_respones(testing_character)
